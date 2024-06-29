@@ -1,53 +1,47 @@
 <?xml version="1.0" encoding="utf-8" ?>
  <Defs>
-  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+  <ThingDef ParentName="MeleeWeaponUltratech">
     <defName>MSSRAG_Anima_Axe</defName>
     <label>Anima Axe</label>
-    <description>A weapon formed from the branches of an anima tree, with crystalised anima sap forming the edge of the blade. This weapon contains the essence of the tree that was felled to create it.</description>
+    <description>A crystal-metallic longsword infused with mechanites that maintain a mono-molecular cutting edge. It cuts through even thick armor with ease, and its light weight permits fast attacks.</description>
+    <soundInteract>Interact_MonoSword</soundInteract>
+    <meleeHitSound>MeleeHit_MonoSword</meleeHitSound>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <smeltable>false</smeltable>
+    <weaponClasses>
+      <li>MeleePiercer</li>
+    </weaponClasses>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponMelee/AnimaAxe</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <techLevel>Tribal</techLevel>
-    <equippedAngleOffset>-65</equippedAngleOffset>
-    <statBases>
-      <MaxHitPoints>280</MaxHitPoints>
-      <MarketValue>810</MarketValue>
-      <WorkToMake>4800</WorkToMake>
-      <Mass>2</Mass>
-    </statBases>
-    <costList>
-      <MSSRAG_AnimaLog>1</MSSRAG_AnimaLog>
-      <MSSRAG_AnimaSap>1</MSSRAG_AnimaSap>
-      <AnimaFiber MayRequire="xrushha.animagear">15</AnimaFiber>
-    </costList>
-    <weaponTags>
-      <li>MSSRAGAnimaWeapon</li>
-    </weaponTags>
     <tools>
       <li>
         <label>handle</label>
         <capacities>
-          <li>Poke</li>
+          <li>Blunt</li>
         </capacities>
-        <power>9</power>
+        <power>12</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>25</power>
         <cooldownTime>2</cooldownTime>
+        <armorPenetration>0.9</armorPenetration>
       </li>
       <li>
         <label>edge</label>
-        <labelUsedInLogging>false</labelUsedInLogging>
         <capacities>
           <li>Cut</li>
         </capacities>
-        <power>20</power>
-        <cooldownTime>2.35</cooldownTime>
-        <armorPenetration>0.3</armorPenetration>
+        <power>25</power>
+        <cooldownTime>2</cooldownTime>
+        <armorPenetration>0.9</armorPenetration>
       </li>
     </tools>
-    <recipeMaker>
-      <recipeUsers>
-        <li>CraftingSpot</li>
-      </recipeUsers>
-    </recipeMaker>
   </ThingDef>
 </Defs>
